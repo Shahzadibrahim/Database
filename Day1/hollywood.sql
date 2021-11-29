@@ -1,0 +1,2 @@
+-- SELECT COUNT(*) from actors;
+-- INSERT INTO actors (first_name, last_name, number_of_oscars) VALUES('Jason','Statham' NULL);
