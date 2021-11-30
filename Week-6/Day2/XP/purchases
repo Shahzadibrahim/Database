@@ -1,0 +1,3 @@
+-- select first_name, last_name, product from customers 
+-- 	inner join purchases on purchases.customer_id = customers.customer_id
+-- 	inner join items on purchases.item_id = items.item_id
