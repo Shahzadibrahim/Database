@@ -1,1 +1,14 @@
 
+-- select first_name,last_name from customers order by last_name asc limit 2 offset 3
+-- DELETE FROM purchases 
+-- USING customers
+-- WHERE customers.customer_id = purchases.customer_id and customers.first_name='Scott';
+-- select * from customers where first_name='Scott'
+-- SELECT customers.first_name,customers.last_name,items.product
+-- FROM purchases 
+-- FULL OUTER JOIN customers ON purchases.customer_id = customers.customer_id
+-- FULL OUTER JOIN items ON purchases.item_id = items.item_id
+-- SELECT customers.first_name,customers.last_name,items.product 
+-- FROM purchases 
+-- INNER JOIN customers ON purchases.customer_id = customers.customer_id
+-- INNER JOIN items ON purchases.item_id = items.item_id;
