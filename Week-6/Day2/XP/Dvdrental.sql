@@ -1,0 +1,17 @@
+-- SELECT * FROM customer;
+-- SELECT (first_name, last_name) AS full_name FROM customer;
+-- SELECT DISTINCT create_date FROM customer;
+-- SELECT * FROM customer ORDER BY first_name DESC;
+-- SELECT film_id, title, description, release_year, rental_rate FROM film ORDER BY rental_rate;
+-- SELECT address, phone FROM address WHERE district ILIKE '%Texas%';
+-- SELECT  * FROM film WHERE film_id IN (15,150);
+-- SELECT film_id, title, description, release_year, rental_rate FROM film ORDER BY rental_rate;
+-- SELECT title FROM film;
+-- SELECT film_id, title, description, length, rental_rate FROM film WHERE title ILIKE 'chamber italian';
+-- SELECT film_id, title, description, length, rental_rate FROM film WHERE title ILIKE 'ca%';
+-- select title from film order by rental_rate asc limit 10
+-- select title from film order by rental_rate asc limit 10 offset 10
+-- SELECT (first_name, last_name) AS full_name, amount, payment_date FROM payment INNER JOIN customer ON payment.customer_id = customer.customer_id ORDER BY payment.customer_id;
+-- select film.title from film join inventory on film.film_id=inventory.film_id where film.film_id not in (inventory.film_id)
+-- select city.city,country.country from city join country on city.country_id=country.country_id
+-- select customer.customer_id, customer.first_name, customer.last_name, payment.amount, payment.payment_date from customer inner join payment on customer.customer_id = payment.customer_id order by payment.staff_id;
