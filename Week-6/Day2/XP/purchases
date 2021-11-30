@@ -1,3 +1,45 @@
+select * from items order by price asc;
+select * from items where price > 80 order by price asc;
+select first_name, last_name from customers order by first_name asc limit 3;
+public=# select last_name from customers order by last_name desc;
+
+
+CREATE TABLE purchases(
+	id SERIAL,
+	customer_id integer,
+	item_id integer,
+	PRIMARY KEY (id),
+	FOREIGN KEY(customer_id) REFERENCES customers (customer_id),
+	FOREIGN KEY(item_id) REFERENCES items (item_id));
+
+insert into purchases (customer_id) values ((select customer_id from customers where customer_id = 	2));
+
+it works as item id can be left blank
+insert into purchases (customer_id, item_id) values
+	((select customer_id from customers where customer_id = 1),(select item_id from items where item_id = 5)),
+	((select customer_id from customers where customer_id = 2),(select item_id from items where item_id = 4)),
+	((select customer_id from customers where customer_id = 3),(select item_id from items where item_id = 3)),
+	((select customer_id from customers where customer_id = 4),(select item_id from items where item_id = 2)),
+	((select customer_id from customers where customer_id = 5),(select item_id from items where item_id = 1));
+select * from purchases;
+select customers.first_name, customers.last_name, purchases.item_id from customers inner join purchases on customers.customer_id = purchases.customer_id;
+
+select customers.first_name, customers.last_name, purchases.item_id from customers inner join purchases on customers.customer_id = purchases.customer_id where customers.customer_id = 4;
+
+select customers.first_name, customers.last_name, purchases.item_id from customers inner join purchases on customers.customer_id = purchases.customer_id where purchases.item_id = 2 and purchases.item_id = 3;
+
+INSERT INTO items (product, price) VALUES ('Hard Drive',250);
+INSERT INTO purchases (customer_id,item_id) VALUES
+( (SELECT customer_id from customers WHERE first_name='Scott'),
+(SELECT item_id from items WHERE product='Hard Drive'));
+
+
+select * from customers;
+select concat(first_name,' ',last_name) as full_name from customers;
+select first_name, last_name, product from customers inner join purchases on purchases.customer_id = customers.customer_id inner join items on purchases.item_id = items.item_id;
+
+
+
 -- select first_name, last_name, product from customers 
 -- 	inner join purchases on purchases.customer_id = customers.customer_id
 -- 	inner join items on purchases.item_id = items.item_id
