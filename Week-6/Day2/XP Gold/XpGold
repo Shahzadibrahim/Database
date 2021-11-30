@@ -1,0 +1,10 @@
+Exercise 1: DVD Rental Continuee....
+
+-- select rating, count(rating) From film group by rating
+-- select * from film where rating='G' or rating ='PG' or rating='PG-13'
+-- select * from film where (rating='G' or rating ='PG' or rating='PG-13') and length < 120 and rental_rate<3 order by title asc
+-- UPDATE customer
+-- SET first_name='Fay',last_name='Blashka',email='fayblash@gmail.com' 
+-- WHERE customer_id=20
+-- update address 
+-- set address='Barry Street 8c' where address_id=24 
