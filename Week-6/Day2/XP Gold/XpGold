@@ -8,3 +8,20 @@ Exercise 1: DVD Rental Continuee....
 -- WHERE customer_id=20
 -- update address 
 -- set address='Barry Street 8c' where address_id=24 
+
+
+Excercise 2
+
+
+-- select * from students
+-- update students set birth_date='1998-11-02' where last_name='Benichou'
+-- update students set last_name = 'Guez' where id = 5
+-- delete from students where first_name='Lea' and last_name='Benichou'
+-- select count(*) from students
+-- select count(*) from students where birth_date>'2000-01-01'
+-- ALTER TABLE students ADD math_grade smallint
+-- update students set math_grade=80 where id=1
+-- update students set math_grade=90 where id=2 or id=4
+-- update students set math_grade=40 where id=6
+-- select count(*) from students where math_grade>83
+-- INSERT INTO students (last_name, first_name, birth_date, math_grade) VALUES ('Simpson','Omer', '1980-10-03', 70)
