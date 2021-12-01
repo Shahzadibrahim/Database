@@ -1,0 +1,66 @@
+-- CREATE TABLE customer(
+--     customer_id serial primary key,
+--     first_name varchar(50),
+--     last_name varchar(50)
+-- )
+-- CREATE TABLE customer_profile (
+--     profile_id serial primary key,
+--     customer_id integer,
+--     FOREIGN KEY (customer_id) REFERENCES customer(customer_id) on delete cascade
+-- )
+-- insert into
+--     customer(first_name, last_name)
+-- values
+--     ('John', 'Lee'),
+-- ('Jason', 'Lin'),
+-- ('Michel', 'Bob')
+-- insert into
+--     customer_profile(customer_id)
+-- values
+--     (1),
+-- (2),
+-- (3)
+-- insert into
+--     customer(first_name, last_name)
+-- values
+--     ('William', 'Roy')
+-- insert into
+--     customer_profile(customer_id)
+-- values
+--     (4)
+-- select * from customer
+-- inner join customer_profile on customer.customer_id = customer_profile.customer_id;
+-- select * from customer
+-- left outer join customer_profile on customer.customer_id = customer_profile.customer_id;
+-- select * from customer
+-- right outer join customer_profile on customer.customer_id = customer_profile.customer_id;
+-- select * from customer
+-- full outer join customer_profile on customer.customer_id = customer_profile.customer_id;
+-- CREATE TABLE product (
+--     product_id serial PRIMARY KEY,
+--     product varchar(50),
+--     price numeric
+-- )
+-- CREATE TABLE orders (
+--     order_id serial PRIMARY KEY,
+--     customer_id integer,
+--     product_id integer,
+--     FOREIGN key(customer_id) references customer(customer_id),
+--     FOREIGN key(product_id) references product(product_id)
+-- )
+-- select * from orders inner join product on product.product_id = orders.product_id inner join
+-- customer on customer.customer_id = orders.customer_id
+-- select * from orders full outer join product on product.product_id = orders.product_id full outer join
+-- customer on customer.customer_id = orders.customer_id
+-- select * from orders right outer join product on product.product_id = orders.product_id left outer join
+-- customer on customer.customer_id = orders.customer_id
+-- select * from orders left outer join product on product.product_id = orders.product_id right outer join
+-- customer on customer.customer_id = orders.customer_id
+-- select * from orders right outer join product on product.product_id = orders.product_id left outer join
+-- customer on customer.customer_id = orders.customer_id where customer.customer_id in (select orders.customer_id from orders)
+-- select * from orders left outer join product on product.product_id = orders.product_id left outer join
+-- customer on customer.customer_id = orders.customer_id
+-- select * from orders left outer join product on product.product_id = orders.product_id right outer join
+-- customer on customer.customer_id = orders.customer_id
+-- select * from orders left outer join product on product.product_id = orders.product_id full outer join
+-- customer on customer.customer_id = orders.customer_id
