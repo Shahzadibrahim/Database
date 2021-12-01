@@ -1,3 +1,5 @@
+Exercise 1: DVD Rental
+
 -- select name from language
 -- select film.title,film.description,language.name
 -- from film
@@ -37,6 +39,10 @@
 -- (1,1,'The Great Movie',10,'You should definitely go see this movie. I loved it!','2021-12-01'),
 -- (2,1,'Another Advanter of life!',1,'This is also a good movie. Dont miss it','2021-12-01');
 -- delete from new_film where id=1
+
+Exercise 2 : DVD Rental
+
+
 --  update film
 --  set language_id = 3
 --  where rental_duration = 3
