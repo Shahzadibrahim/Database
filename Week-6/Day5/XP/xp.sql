@@ -1,0 +1,4 @@
+-- create table menu (
+-- id serial primary key,
+-- Name varchar (50),
+-- Price int)
